@@ -1,4 +1,6 @@
+import StackUsing_LinkedList.IQueue;
 import StackUsing_LinkedList.IStack;
+import StackUsing_LinkedList.Queue;
 import StackUsing_LinkedList.Stack;
 
 public class Main {
@@ -24,5 +26,13 @@ public class Main {
         System.out.println(stack.pop());
         stack.printData();
         System.out.println();
+        //Queue Operations
+        System.out.println("---Queue Operations---");
+        IQueue queue = new Queue();
+        queue.enqueue(56);
+        queue.enqueue(30);
+        queue.enqueue(70);
+        queue.printData();
+
     }
 }
