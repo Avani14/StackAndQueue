@@ -10,15 +10,14 @@ public class Stack extends Common implements IStack{
 
     @Override
     public int pop() {
-        int data;
         Node temp = head;
-        while(temp.next.next != null)
-        {
+        Node prev = head;
+        while(temp.next != null) {
+            prev = temp;
             temp = temp.next;
         }
-        data = temp.next.data;
-        temp.next = null;
-        return data;
+        prev.next = null;
+        return temp.data;
     }
 
     @Override
@@ -28,7 +27,6 @@ public class Stack extends Common implements IStack{
         {
             temp = temp.next;
         }
-
         return temp.data;
     }
 }
