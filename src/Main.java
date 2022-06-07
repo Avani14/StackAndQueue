@@ -33,6 +33,8 @@ public class Main {
         queue.enqueue(30);
         queue.enqueue(70);
         queue.printData();
-
+        System.out.println();
+        System.out.println(queue.dequeue());
+        queue.printData();
     }
 }
