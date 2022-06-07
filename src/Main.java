@@ -4,10 +4,25 @@ import StackUsing_LinkedList.Stack;
 public class Main {
     public static void main(String[] args) {
         IStack stack = new Stack();
+        //Use Case 1 Pushing the data in stack
         System.out.println("---Stack Operations---");
         stack.push(70);
         stack.push(30);
         stack.push(56);
         stack.printData();
+        System.out.println();
+        // Use case 2 able to peek and pop
+        System.out.println(stack.peek());
+        stack.printData();
+        System.out.println();
+        System.out.println(stack.pop());
+        stack.printData();
+        System.out.println();
+        System.out.println(stack.pop());
+        stack.printData();
+        System.out.println();
+        System.out.println(stack.pop());
+        stack.printData();
+        System.out.println();
     }
 }
