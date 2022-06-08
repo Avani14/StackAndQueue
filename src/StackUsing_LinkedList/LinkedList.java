@@ -2,17 +2,17 @@ package StackUsing_LinkedList;
 
 import java.util.Scanner;
 
-class Node{
-    int data;
-    Node next;
-    public Node(int data)
-    {
-        this.data = data;
-        this.next = null;
-    }
-
-}
-//public class LinkedList {
+//class Node{
+//    int data;
+//    Node next;
+//    public Node(int data)
+//    {
+//        this.data = data;
+//        this.next = null;
+//    }
+//
+//}
+//public class LinkedList<E> {
 //    //Head of list
 //    static Node head;
 //    static Scanner sc = new Scanner(System.in);
@@ -125,14 +125,15 @@ class Node{
 //        }
 //    }
 //    //Printing list
-//    public  void printList() {
+//    Node temp = head;
+//    public  void  printList() {
 //
-//        Node temp = head;
+//
 //
 //        while(temp != null) {
-//            System.out.print(temp.data+"->");
-//            temp = temp.next;
+//            System.out.print(temp.getData()+"->");
+//            temp = temp.getNext();
 //        }
 //    }
-//
+////
 //}

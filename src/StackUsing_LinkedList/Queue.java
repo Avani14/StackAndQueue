@@ -1,8 +1,8 @@
 package StackUsing_LinkedList;
 
-public class Queue extends Common implements IQueue{
+public class Queue<E> extends Common<E> implements IQueue<E>{
     @Override
-    public void enqueue(int data) {
+    public void enqueue(E data) {
         Node node = new Node(data);
         if(head == null)
         {
@@ -10,22 +10,22 @@ public class Queue extends Common implements IQueue{
             return;
         }
         Node temp = head;
-        while(temp.next != null)
+        while(temp.getNext() != null)
         {
-            temp = temp.next;
+            temp = temp.getNext();
         }
-        temp.next = node;
+        temp.setNext(node);
     }
 
     @Override
-    public int dequeue() {
+    public E dequeue() {
         if(head == null)
         {
             System.out.println("The queue is empty");
-            return 0;
+            return (E) null;
         }
-        int data = head.data;
-        head = head.next;
+        E data = (E) head.getData();
+        head = head.getNext();
         return data;
     }
 }

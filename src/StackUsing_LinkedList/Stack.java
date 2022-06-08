@@ -1,32 +1,32 @@
 package StackUsing_LinkedList;
 
-public class Stack extends Common implements IStack{
+public class Stack<E> extends Common<E> implements IStack<E>{
     @Override
     public void push(int data) {
         Node node = new Node(data);
-        node.next = head;
+        node.setNext(head);
         head = node;
     }
 
     @Override
-    public int pop() {
+    public E pop() {
         Node temp = head;
         Node prev = head;
-        while(temp.next != null) {
+        while(temp.getNext() != null) {
             prev = temp;
-            temp = temp.next;
+            temp = temp.getNext();
         }
-        prev.next = null;
-        return temp.data;
+        prev.setNext(null);
+        return (E) temp.getData();
     }
 
     @Override
-    public int peek() {
+    public E peek() {
         Node temp = head;
-        while(temp.next != null)
+        while(temp.getNext() != null)
         {
-            temp = temp.next;
+            temp = temp.getNext();
         }
-        return temp.data;
+        return (E) temp.getData();
     }
 }

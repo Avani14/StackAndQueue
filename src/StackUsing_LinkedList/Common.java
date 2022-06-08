@@ -1,15 +1,10 @@
 package StackUsing_LinkedList;
 
-public class Common implements ICommon{
+public class Common<E> implements ICommon<E>{
     Node head;
     @Override
     public boolean isEmpty() {
-        if(head == null)
-        {
-            return true;
-        }
-
-        return false;
+        return head == null;
     }
 
     @Override
@@ -18,7 +13,7 @@ public class Common implements ICommon{
         int count=0;
         while(temp != null)
         {
-            temp = temp.next;
+            temp = temp.getNext();
             count++;
         }
 
@@ -30,8 +25,8 @@ public class Common implements ICommon{
         Node temp = head;
         while(temp!= null)
         {
-            System.out.print(temp.data+"-->");
-            temp = temp.next;
+            System.out.print(temp.getData()+"-->");
+            temp = temp.getNext();
         }
     }
 }

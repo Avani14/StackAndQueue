@@ -1,6 +1,6 @@
 package StackUsing_LinkedList;
 
-public interface IQueue extends ICommon{
-    void enqueue(int data);
-    int dequeue();
+public interface IQueue<E> extends ICommon<E>{
+    void enqueue(E data);
+    E dequeue();
 }

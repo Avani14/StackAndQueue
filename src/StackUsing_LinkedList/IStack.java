@@ -1,9 +1,9 @@
 package StackUsing_LinkedList;
 
-public interface IStack extends ICommon{
+public interface IStack<E> extends ICommon<E>{
 
         void push(int data);
-        int pop();
-        int peek();
+        E pop();
+        E peek();
 
 }
