@@ -1,6 +1,6 @@
 package StackUsing_LinkedList;
 
-public interface ICommon {
+public interface ICommon<E> {
 
         boolean isEmpty();
         int size();

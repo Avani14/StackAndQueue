@@ -5,7 +5,7 @@ import StackUsing_LinkedList.Stack;
 
 public class Main {
     public static void main(String[] args) {
-        IStack stack = new Stack();
+        IStack<Integer> stack = new Stack<Integer>();
         //Use Case 1 Pushing the data in stack
         System.out.println("---Stack Operations---");
         stack.push(70);
@@ -28,7 +28,7 @@ public class Main {
         System.out.println();
         //Queue Operations
         System.out.println("---Queue Operations---");
-        IQueue queue = new Queue();
+        IQueue<Integer> queue = new Queue<Integer>();
         queue.enqueue(56);
         queue.enqueue(30);
         queue.enqueue(70);
